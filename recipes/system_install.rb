@@ -50,3 +50,5 @@ install_rvm     :rvm_prefix => rvm_prefix,
 
 upgrade_rvm     :rvm_prefix => rvm_prefix,
                 :upgrade_strategy => upgrade_strategy
+
+run_command 'rvm fix-permissions system'
