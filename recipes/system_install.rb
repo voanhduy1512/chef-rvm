@@ -51,4 +51,5 @@ install_rvm     :rvm_prefix => rvm_prefix,
 upgrade_rvm     :rvm_prefix => rvm_prefix,
                 :upgrade_strategy => upgrade_strategy
 
-run_command 'rvm fix-permissions system'
+execute "chown -R :rvm /usr/local/rvm"
+execute "chmod -R g+w /usr/local/rvm"
